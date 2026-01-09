@@ -362,6 +362,6 @@ $ReportFile="C:\Temp\YourReport.csv"
 #endregion
  
 #Call the function to generate permission report
-#Generate-PnPSitePermissionRpt -SiteURL $SiteURL -ReportFile $ReportFile -Recursive
-#Generate-PnPSitePermissionRpt -SiteURL $SiteURL -ReportFile $ReportFile -Recursive -ScanItemLevel
-Generate-PnPSitePermissionRpt -SiteURL $SiteURL -ReportFile $ReportFile -Recursive -ScanItemLevel -IncludeInheritedPermissions
+#Generate-PnPSitePermissionRpt -SiteURL $SiteURL -ReportFile $ReportFile -ScanItemLevel
+Generate-PnPSitePermissionRpt -SiteURL $SiteURL -ReportFile $ReportFile -Recursive -ScanItemLevel
+#Generate-PnPSitePermissionRpt -SiteURL $SiteURL -ReportFile $ReportFile -Recursive -ScanItemLevel -IncludeInheritedPermissions
