@@ -27,6 +27,12 @@
       Register-PnPEntraIDAppForInteractiveLogin -ApplicationName "PnP PowerShell" -SharePointDelegatePermissions "AllSites.FullControl" -Tenant Salaudeen.onmicrosoft.com -Interactive
 
   Replace the value for the -Tenant accordingly. 
+
+  > :information_source: If you encounter the following error:
+  >
+  > " $${\color{red}Register-PnPEntraIDAppForInteractiveLogin: A parameter cannot be found that matches parameter name 'Interactive'}$$ "
+  >
+  > Remove the $${\color{yellow}-Interactive}$$ parameter from the cmdlet. 
   
   > :heavy_exclamation_mark: Make a note of the AppID created!
 
