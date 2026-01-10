@@ -27,7 +27,7 @@ Legacy authentication methods have been deprecated in favor of Modern Authentica
 
 :information_source: To establish a connection while working within Windows **PowerShell 5.1** or the **PowerShell ISE**, execute the following command:
 
-    Connect-PnPOnline -Url "https://YOURTENANT.sharepoint.com" -ClientId "YOUR-CLIENT-ID" -Interactive
+    Connect-PnPOnline -Url "https://YOURTENANT.sharepoint.com" -Interactive -ClientId "YOUR-CLIENT-ID" 
 
 :information_source: To establish a connection while working within Windows **PowerShell 7.2** in a default web browser session, execute the following command:
 
