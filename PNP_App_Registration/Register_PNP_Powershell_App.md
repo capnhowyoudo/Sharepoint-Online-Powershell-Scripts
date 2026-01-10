@@ -1,3 +1,9 @@
+# Register PNP Powershell App
+
+Legacy authentication methods for **Connect-PnPOnline** have been deprecated as Microsoft enforces Modern Authentication (OAuth 2.0) and granular security controls. As of September 2024, the multi-tenant "PnP Management Shell" application was retired, making it mandatory to utilize a Single-Tenant Entra ID App Registration.
+
+These architectural shifts require an environment running PowerShell 7.4+ (utilizing .NET 8) and the latest PnP.PowerShell module to support current MSAL (Microsoft Authentication Library) standards and token caching mechanisms.
+
 # Install Powershell 7+
 
   Run the below command in powershell
