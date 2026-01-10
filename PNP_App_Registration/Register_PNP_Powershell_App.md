@@ -24,21 +24,22 @@
 
   The final step is creating an Azure App ID that grants the tenant access to the Azure AD Application. Make sure you run the below command from an account that has access to create App IDs in your Entra ID Using Powershell 7
 
-      Register-PnPEntraIDAppForInteractiveLogin -ApplicationName "PnP PowerShell" -SharePointDelegatePermissions "AllSites.FullControl" -Tenant Salaudeen.onmicrosoft.com -Interactive
+  :information_source:  If you prefer to authenticate in a default web browser session, Use the command below.
 
-  Replace the value for the -Tenant accordingly. 
+    Register-PnPEntraIDAppForInteractiveLogin -ApplicationName "PnP PowerShell" -SharePointDelegatePermissions "AllSites.FullControl" -Tenant Salaudeen.onmicrosoft.com -DeviceLogin
 
-  > :information_source: If you encounter the following error:
-  >
-  > " $${\color{red}Register-PnPEntraIDAppForInteractiveLogin: A parameter cannot be found that matches parameter name 'Interactive'}$$ "
-  >
-  > Remove the $${\color{yellow}-Interactive}$$ parameter from the cmdlet. 
+  :information_source: If you prefer to authenticate in a private session to avoid conflicts with other logged-in accounts, use the command below.
+  > Note that your default browser will still open automatically; simply ignore or close that window, switch to the Private/Incognito window that just opened, and enter the 8-digit code displayed in your PowerShell console.
+
+    Start-Process "msedge.exe" "-inprivate https://microsoft.com/devicelogin"; Register-PnPEntraIDAppForInteractiveLogin -ApplicationName "PnP PowerShell" -SharePointDelegatePermissions "AllSites.FullControl" -Tenant Salaudeen.onmicrosoft.com -DeviceLogin
   
-  > :heavy_exclamation_mark: Make a note of the AppID created!
-
-  <img width="759" height="512" alt="image" src="https://github.com/user-attachments/assets/3879e4a4-313c-4186-9f7a-8cdb0c41a572" />
+  :warning: Before running the command, ensure you update the **-Tenant** value from **Salaudeen.onmicrosoft.com** to the specific domain where you are registering the application.
 
   Executing the above cmdlet creates a new App ID, and you’ll be prompted to log in and provide consent for your tenant. To complete this step, you must log in with Global Admin (or Tenant Administrator) permissions.
 
   <img width="900" height="711" alt="image" src="https://github.com/user-attachments/assets/16b18768-55d5-4204-a352-0df89110d2c0" />
+
+ :heavy_exclamation_mark: Make a note of the AppID created!
+
+  <img width="759" height="512" alt="image" src="https://github.com/user-attachments/assets/3879e4a4-313c-4186-9f7a-8cdb0c41a572" />
 
