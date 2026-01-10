@@ -24,11 +24,11 @@
 
   The final step is creating an Azure App ID that grants the tenant access to the Azure AD Application. Make sure you run the below command from an account that has access to create App IDs in your Entra ID Using Powershell 7
 
-  :information_source:  If you prefer to authenticate in a default web browser session, Use the command below.
+  :information_source:  If you prefer to authenticate & register in a default web browser session, Use the command below.
 
     Register-PnPEntraIDAppForInteractiveLogin -ApplicationName "PnP PowerShell" -SharePointDelegatePermissions "AllSites.FullControl" -Tenant Salaudeen.onmicrosoft.com -DeviceLogin
 
-  :information_source: If you prefer to authenticate in a private session to avoid conflicts with other logged-in accounts, use the command below.
+  :information_source: If you prefer to authenticate & register in a private session to avoid conflicts with other logged-in accounts, use the command below.
   > Note that your default browser will still open automatically; simply ignore or close that window, switch to the Private/Incognito window that just opened, and enter the 8-digit code displayed in your PowerShell console.
 
     Start-Process "msedge.exe" "-inprivate https://microsoft.com/devicelogin"; Register-PnPEntraIDAppForInteractiveLogin -ApplicationName "PnP PowerShell" -SharePointDelegatePermissions "AllSites.FullControl" -Tenant Salaudeen.onmicrosoft.com -DeviceLogin
