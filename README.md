@@ -33,11 +33,11 @@ Legacy authentication methods have been deprecated in favor of Modern Authentica
 
     Connect-PnPOnline -Url "https://YOURTENANT.sharepoint.com" -Interactive -ClientId "YOUR-CLIENT-ID" 
 
-:information_source: To establish a connection while working within Windows **PowerShell 7.2** in a default web browser session, execute the following command:
+:information_source: To establish a connection while working within Windows **PowerShell 7.1+** in a default web browser session, execute the following command:
 
     Connect-PnPOnline -Url "https://YOURTENANT.sharepoint.com" -DeviceLogin -ClientId "YOUR-CLIENT-ID" -Tenant "YOUR-TENANT-NAME"
 
-:information_source: To establish a connection while working within Windows **PowerShell 7.2** in a private session to avoid conflicts with other logged-in accounts, execute the following command:
+:information_source: To establish a connection while working within Windows **PowerShell 7.1+** in a private session to avoid conflicts with other logged-in accounts, execute the following command:
 
     Start-Process "msedge.exe" "-inprivate https://microsoft.com/devicelogin"; Connect-PnPOnline -Url "https://YOURTENANT.sharepoint.com" -DeviceLogin -ClientId "YOUR-CLIENT-ID" -Tenant "YOUR-TENANT-NAME"
     
