@@ -25,6 +25,10 @@ Legacy authentication methods have been deprecated in favor of Modern Authentica
 >    
 > 2. Following the successful registration of your PnP Entra ID Application, you can establish a secure connection to your SharePoint environment using the following command:
 
+:warning: PnP.PowerShell -RequiredVersion 1.12.0 is needed to run in Powershell 5.1 Or Powershell ISE
+
+    Install-Module -Name PnP.PowerShell -RequiredVersion 1.12.0 -Scope CurrentUser -AllowClobber
+
 :information_source: To establish a connection while working within Windows **PowerShell 5.1** or the **PowerShell ISE**, execute the following command:
 
     Connect-PnPOnline -Url "https://YOURTENANT.sharepoint.com" -Interactive -ClientId "YOUR-CLIENT-ID" 
