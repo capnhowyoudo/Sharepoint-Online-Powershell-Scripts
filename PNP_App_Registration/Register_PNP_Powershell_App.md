@@ -22,7 +22,7 @@ These architectural shifts require an environment running PowerShell 7.4+ (utili
 
 # Install the New PnP PowerShell Module
 
-  To install the new PnP PowerShell module, use:
+  To install the new PnP PowerShell module in Powershell 7+, use:
 
     Install-Module PnP.PowerShell
 
