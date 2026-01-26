@@ -31,6 +31,7 @@ These architectural shifts require an environment running PowerShell 7.4+ (utili
   The final step is creating an Azure App ID that grants the tenant access to the Azure AD Application. Make sure you run the below command from an account that has access to create App IDs in your Entra ID Using Powershell 7
 
   :information_source:  If you prefer to authenticate & register in a default web browser session, Use the command below.
+  > Note Use -Interactive if -DeviceLogin is not prompting for login
 
     Register-PnPEntraIDAppForInteractiveLogin -ApplicationName "PnP PowerShell" -SharePointDelegatePermissions "AllSites.FullControl" -Tenant Salaudeen.onmicrosoft.com -DeviceLogin
 
